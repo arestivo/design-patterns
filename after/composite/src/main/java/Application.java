@@ -6,11 +6,14 @@ public class Application {
         Circle circle1 = new Circle(10, 20, 5);
         Circle circle2 = new Circle(5, 5, 10);
 
-        drawing.addShape(rectangle);
-        drawing.addShape(circle1);
+        Group group = new Group();
+        group.addShape(rectangle);
+        group.addShape(circle1);
+
+        drawing.addShape(group);
         drawing.addShape(circle2);
 
-        rectangle.move(-5, -5);
+        group.move(-5, -5);
 
         drawing.draw();
     }
