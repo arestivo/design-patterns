@@ -2,10 +2,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Order {
-    enum PAYMENT_TYPE { CREDIT_CARD, MB_WAY, CASH, TRANSFER }
-
-    private PAYMENT_TYPE paymentType;
     private List<Product> products;
+    private Payment payment;
 
     public Order() {
         products = new ArrayList<>();
@@ -15,29 +13,17 @@ public class Order {
         products.add(product);
     }
 
-    public void setPaymentType(PAYMENT_TYPE paymentType) {
-        this.paymentType = paymentType;
+    public void setPayment(Payment payment) {
+        this.payment = payment;
     }
 
-    public void pay() {
+
+    public void pay() throws PaymentFailedException {
         double total = 0;
 
         for (Product product : products)
             total += product.getPrice();
 
-        switch (paymentType) {
-            case CREDIT_CARD:
-                //...
-                break;
-            case MB_WAY:
-                //...
-                break;
-            case CASH:
-                //...
-                break;
-            case TRANSFER:
-                //...
-                break;
-        }
+        payment.pay(total);
     }
 }
