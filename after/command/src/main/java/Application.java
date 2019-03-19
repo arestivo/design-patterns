@@ -13,8 +13,12 @@ public class Application {
         drawing.addShape(group);
         drawing.addShape(circle2);
 
-        group.move(-5, -5);
+        MoveCommand move = new MoveCommand(group, -5, -5);
 
+        move.execute();
+        drawing.draw();
+
+        move.undo();
         drawing.draw();
     }
 }
