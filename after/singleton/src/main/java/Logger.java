@@ -3,14 +3,14 @@ public class Logger {
 
     private static Logger uniqueInstance;
 
+    private Logger() {
+        //... Opens log file
+    }
+
     public static Logger instance() {
         if (uniqueInstance == null)
             uniqueInstance = new Logger();
         return uniqueInstance;
-    }
-
-    public Logger() {
-        //... Opens log file
     }
 
     public void log(String text, SEVERITY severity) {
