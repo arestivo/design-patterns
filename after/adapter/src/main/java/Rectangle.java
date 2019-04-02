@@ -15,9 +15,4 @@ public class Rectangle extends Shape {
     public void draw(OldGraphicsFramework graphics) {
         graphics.drawRectangle(x, y, width, height);
     }
-
-    @Override
-    public void drawNew(NewGraphicsFramework graphics) {
-        graphics.doARectangle(x, y, x + width, y + height);
-    }
 }

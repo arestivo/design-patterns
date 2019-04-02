@@ -13,9 +13,4 @@ public class Circle extends Shape {
     public void draw(OldGraphicsFramework graphics) {
         graphics.drawCircle(x, y, radius);
     }
-
-    @Override
-    public void drawNew(NewGraphicsFramework graphics) {
-        graphics.doACircle(x, y, radius);
-    }
 }
