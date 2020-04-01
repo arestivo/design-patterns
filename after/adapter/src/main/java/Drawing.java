@@ -8,7 +8,7 @@ public class Drawing {
         shapes = new ArrayList<>();
     }
 
-    public void draw(OldGraphicsFramework graphics) {
+    public void draw(GraphicsFrameworkAdapter graphics) {
         for (Shape shape : shapes)
             shape.draw(graphics);
     }

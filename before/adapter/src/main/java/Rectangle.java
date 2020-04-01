@@ -1,3 +1,6 @@
+import frameworkA.GraphicsFrameworkA;
+import frameworkB.GraphicsFrameworkB;
+
 public class Rectangle extends Shape {
     private double x;
     private double y;
@@ -12,12 +15,12 @@ public class Rectangle extends Shape {
     }
 
     @Override
-    public void draw(OldGraphicsFramework graphics) {
+    public void draw(GraphicsFrameworkB graphics) {
         graphics.drawRectangle(x, y, width, height);
     }
 
     @Override
-    public void drawNew(NewGraphicsFramework graphics) {
-        graphics.doARectangle(x, y, x + width, y + height);
+    public void draw(GraphicsFrameworkA graphics) {
+        graphics.drawRectangleShape(x, y, x + width, y + height);
     }
 }

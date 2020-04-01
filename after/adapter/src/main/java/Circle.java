@@ -10,7 +10,7 @@ public class Circle extends Shape {
     }
 
     @Override
-    public void draw(OldGraphicsFramework graphics) {
+    public void draw(GraphicsFrameworkAdapter graphics) {
         graphics.drawCircle(x, y, radius);
     }
 }

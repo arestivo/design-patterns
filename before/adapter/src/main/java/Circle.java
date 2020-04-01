@@ -1,3 +1,6 @@
+import frameworkA.GraphicsFrameworkA;
+import frameworkB.GraphicsFrameworkB;
+
 public class Circle extends Shape {
     private double x;
     private double y;
@@ -10,12 +13,12 @@ public class Circle extends Shape {
     }
 
     @Override
-    public void draw(OldGraphicsFramework graphics) {
+    public void draw(GraphicsFrameworkB graphics) {
         graphics.drawCircle(x, y, radius);
     }
 
     @Override
-    public void drawNew(NewGraphicsFramework graphics) {
-        graphics.doACircle(x, y, radius);
+    public void draw(GraphicsFrameworkA graphics) {
+        graphics.drawEllipseShape(x, y, radius, radius);
     }
 }
